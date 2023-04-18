@@ -1,4 +1,4 @@
-#include "Image.h"
+#include "headers/Image.h"
 #include <QImage>
 #include <QPoint>
 

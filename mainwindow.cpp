@@ -7,6 +7,11 @@
 #include <QTabWidget>
 #include <QFileInfo>
 
+#include "src/headers/TreeViewWrapper.h"
+#include "src/headers/ImageFactory.h"
+#include "src/headers/ImageManager.h"
+#include "src/headers/ImageViewManager.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -31,12 +36,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tabWidget->setCurrentIndex(0);
 
     //连接信号槽
-    connect(ui->actionOpen,&QAction::triggered,this,&MainWindow::OpenFile);
-    connect(ui->actionCloseSeleted, &QAction::triggered,this, &MainWindow::CloseFile);
+    connect(ui->actionOpen, &QAction::triggered, this, &MainWindow::OpenFile);
+    connect(ui->actionCloseSeleted, &QAction::triggered, this, &MainWindow::CloseFile);
     connect(ui->actionCloseAll, &QAction::triggered, this, &MainWindow::CloseAllFile);
-    connect(ui->actionSave, &QAction::triggered,this, &MainWindow::SaveFile);
-    connect(ui->treeViewImage,&QTreeView::clicked, this, &MainWindow::SelectBandToShow);
-    connect(ui->tabWidget,&QTabWidget::currentChanged, this, &MainWindow::TabChanged);
+    connect(ui->actionSave, &QAction::triggered, this, &MainWindow::SaveFile);
+    connect(ui->treeViewImage, &QTreeView::clicked, this, &MainWindow::SelectBandToShow);
+    connect(ui->tabWidget, &QTabWidget::currentChanged, this, &MainWindow::TabChanged);
     connect(ui->btnLoad, &QPushButton::clicked, this, &MainWindow::LoadImageView);
 }
 

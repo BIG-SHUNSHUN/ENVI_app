@@ -2,12 +2,11 @@
 #define IMAGEMANAGER_H
 
 #include <QVector>
-#include "Image.h"
-#include "mainwindow.h"
 
+class Image;
 class MainWindow;
 
-//Image管理类
+// Image管理类
 class ImageManager
 {
 public:
@@ -16,7 +15,7 @@ public:
     void DeleteImage(int index);
     void DeleteAllImage();
     void SaveImage(int index);
-    void RegisterObserver(MainWindow* mainWindow);    //注册观察者
+    void RegisterObserver(MainWindow* mainWindow);    // 注册观察者
     int Size();
     const Image* GetImage(int index);
 

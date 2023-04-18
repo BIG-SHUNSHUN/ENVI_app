@@ -1,5 +1,8 @@
-﻿#include "ImageViewManager.h"
+﻿#include "headers/ImageViewManager.h"
 #include <QMessageBox>
+
+#include "headers/ImageManager.h"
+#include "headers/ImageView.h"
 
 ImageViewManager::ImageViewManager()
 {

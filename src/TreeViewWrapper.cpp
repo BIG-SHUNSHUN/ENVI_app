@@ -1,6 +1,9 @@
-﻿#include "TreeViewWrapper.h"
+﻿#include "headers/TreeViewWrapper.h"
 #include <QStandardItemModel>
 #include <QHeaderView>
+
+#include "headers/Image.h"
+#include "headers/ImageManager.h"
 
 TreeViewWrapper::TreeViewWrapper(QTreeView* treeView)
 {
@@ -15,7 +18,7 @@ TreeViewWrapper::~TreeViewWrapper()
 
 int TreeViewWrapper::GetTopParentRow(const QModelIndex *index)
 {
-    //由QModelIndex得到QStandardItem
+    // 由QModelIndex得到QStandardItem
     QStandardItemModel* model = (QStandardItemModel*)(m_treeView->model());
     QStandardItem* item = model->itemFromIndex(*index);
     while (item->parent()!=nullptr)
@@ -27,16 +30,16 @@ int TreeViewWrapper::GetTopParentRow(const QModelIndex *index)
 
 void TreeViewWrapper::UpdateTreeView()
 {
-    //创建Model
+    // 创建Model
     QStandardItemModel* model = new QStandardItemModel(m_treeView);
     for(int i = 0; i< ImageManager::GetInstance()->Size(); i++)
     {
-        const Image* image = ImageManager::GetInstance()->GetImage(i);    //影像
-        QString fileName = QString::fromLocal8Bit(image->GetFileName().c_str());    //文件名
+        const Image* image = ImageManager::GetInstance()->GetImage(i);    // 影像
+        QString fileName = QString::fromLocal8Bit(image->GetFileName().c_str());    // 文件名
         QStandardItem* item = new QStandardItem(fileName);
-        model->appendRow(item);  //添加文件名信息
-        const HeadInfo& headerInfo = image->GetHeaderInfo();    //影像头文件信息
-        //添加波段名信息
+        model->appendRow(item);  // 添加文件名信息
+        const HeadInfo& headerInfo = image->GetHeaderInfo();    // 影像头文件信息
+        // 添加波段名信息
         if(headerInfo.m_bandNames.size()!=0)
         {
             for(int band = 0; band < headerInfo.m_bands; band++)

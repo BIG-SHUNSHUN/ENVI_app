@@ -1,4 +1,4 @@
-﻿#include "Function.h"
+﻿#include "headers/Function.h"
 
 void Trim(string & s, char ch)
 {

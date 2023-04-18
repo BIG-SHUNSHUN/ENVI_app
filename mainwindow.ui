@@ -77,7 +77,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tabGrey">
        <attribute name="title">
@@ -367,7 +367,7 @@ background-color: rgb(0, 255, 0);</string>
      <x>0</x>
      <y>0</y>
      <width>410</width>
-     <height>17</height>
+     <height>36</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

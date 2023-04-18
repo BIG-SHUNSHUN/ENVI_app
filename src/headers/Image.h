@@ -7,7 +7,7 @@
 #include <QPainter>
 #include "Function.h"
 #include "ROI.h"
-#include "opencv2/opencv.hpp"
+#include <opencv2/opencv.hpp>
 
 using namespace std;
 using namespace cv;

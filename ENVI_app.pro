@@ -16,32 +16,32 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    Function.cpp \
-    Image.cpp \
-    ImageFactory.cpp \
-    ImageManager.cpp \
-    ImageView.cpp \
-    ImageViewManager.cpp \
-    ROI.cpp \
-    TreeViewWrapper.cpp \
-    displaypanel.cpp \
+    src/Function.cpp \
+    src/Image.cpp \
+    src/ImageFactory.cpp \
+    src/ImageManager.cpp \
+    src/ImageView.cpp \
+    src/ImageViewManager.cpp \
+    src/ROI.cpp \
+    src/TreeViewWrapper.cpp \
+    src/displaypanel.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
-    Function.h \
-    Image.h \
-    ImageFactory.h \
-    ImageManager.h \
-    ImageView.h \
-    ImageViewManager.h \
-    ROI.h \
-    TreeViewWrapper.h \
-    displaypanel.h \
+    src/headers/Function.h \
+    src/headers/Image.h \
+    src/headers/ImageFactory.h \
+    src/headers/ImageManager.h \
+    src/headers/ImageView.h \
+    src/headers/ImageViewManager.h \
+    src/headers/ROI.h \
+    src/headers/TreeViewWrapper.h \
+    src/headers/displaypanel.h \
     mainwindow.h
 
 FORMS += \
-    displaypanel.ui \
+    src/ui/displaypanel.ui \
     mainwindow.ui
 
 # Default rules for deployment.
@@ -54,5 +54,7 @@ RESOURCES += \
 
 win32: LIBS += -LC:/dev_tools/opencv460-vs2019-debug/x64/vc16/lib/ -lopencv_world460d
 
-INCLUDEPATH += C:/dev_tools/opencv460-vs2019-debug/include
-DEPENDPATH += C:/dev_tools/opencv460-vs2019-debug/include
+INCLUDEPATH += /usr/local/include/opencv4
+DEPENDPATH += /usr/local/include/opencv4
+
+unix:!macx: LIBS += -L$$PWD/../../../../usr/local/lib/ -lopencv_core -lopencv_highgui -lopencv_imgcodecs

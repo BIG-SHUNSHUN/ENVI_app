@@ -1,5 +1,8 @@
-﻿#include "ImageView.h"
+﻿#include "headers/ImageView.h"
 #include <QPainter>
+
+#include "headers/Image.h"
+#include "headers/ImageViewManager.h"
 
 ImageView::ImageView(QWidget *parent, int number) : QWidget(parent, Qt::Window)
 {

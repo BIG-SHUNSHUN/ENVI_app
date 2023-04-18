@@ -2,8 +2,9 @@
 #define IMAGEVIEW_H
 
 #include <QWidget>
-#include "ImageViewManager.h"
-#include "Image.h"
+
+class Image;
+class ImageViewManager;
 
 class ImageView : public QWidget
 {

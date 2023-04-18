@@ -2,15 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "Image.h"
-#include "ImageFactory.h"
-#include "ImageManager.h"
 #include <QModelIndex>
-#include "TreeViewWrapper.h"
-#include "ImageViewManager.h"
 #include <QLabel>
 #include <QRadioButton>
-#include "ROI.h"
 
 class TreeViewWrapper;
 

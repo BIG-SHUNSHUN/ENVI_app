@@ -1,4 +1,4 @@
-﻿#include "displaypanel.h"
+﻿#include "headers/displaypanel.h"
 #include "ui_displaypanel.h"
 
 DisplayPanel::DisplayPanel(QWidget *parent) :

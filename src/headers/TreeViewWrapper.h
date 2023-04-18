@@ -2,8 +2,6 @@
 #define TREEVIEWWRAPPER_H
 
 #include <QTreeView>
-#include "ImageManager.h"
-
 
 class TreeViewWrapper
 {

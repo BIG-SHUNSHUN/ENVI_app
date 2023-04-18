@@ -1,5 +1,8 @@
-﻿#include "ImageManager.h"
+﻿#include "headers/ImageManager.h"
 #include <QFileDialog>
+#include "headers/ImageViewManager.h"
+#include "mainwindow.h"
+#include "headers/Image.h"
 
 ImageManager::ImageManager()
 {
@@ -58,7 +61,7 @@ void ImageManager::SaveImage(int index)
 
 void ImageManager::RegisterObserver(MainWindow *mainWindow)
 {
-    this->m_observer=mainWindow;
+    this->m_observer = mainWindow;
 }
 
 int ImageManager::Size()

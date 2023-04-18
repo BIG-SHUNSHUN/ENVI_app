@@ -1,8 +1,7 @@
 ﻿#ifndef IMAGEVIEWMANAGER_H
 #define IMAGEVIEWMANAGER_H
-#include <ImageView.h>
+
 #include <QVector>
-#include <ImageManager.h>
 #include <QComboBox>
 
 class ImageView;
